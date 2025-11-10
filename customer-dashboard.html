@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="customer-dashboard.css">
+</head>
+<body>
+  <nav class="menu-tab">
+    <ul>
+      <li>
+        <a href="Customer-Profile.html">
+          <img src="profile.png" alt="Profile" class="menu-icon" /><br><br>
+          View Profile
+        </a>
+      </li>
+      <li><a href="customer-dashboard.html">Dashboard</a></li>
+      <li><a href="order-history.html">Order History</a></li>
+      <li><a href="index.html">Log out</a></li>
+    </ul>
+  </nav>
+
+  <main class="main-content">
+    <div class="dashboard-box">
+      <h2>Pending Orders</h2>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Project Type</th>
+            <th>Dimension</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="order-table-body">
+          <!-- Pending orders will be appended here -->
+        </tbody>
+      </table>
+
+      <button class="action-btn" onclick="window.location.href='order-type.html'">Customize a project</button>
+    </div>
+  </main>
+
+  <!-- ✅ Link to external JS -->
+  <script type="module" src="customer-dashboard.js"></script>
+</body>
+</html>

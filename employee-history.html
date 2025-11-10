@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orders History</title>
+  <link rel="stylesheet" href="admin-history.css">
+</head>
+<body>
+  <!-- Sidebar Navigation -->
+  <nav class="menu-tab">
+    <ul>
+      <li>
+        <a href="employee-profile.html">
+          <img src="profile.png" alt="Profile" class="menu-icon" /><br><br>
+          View Profile
+        </a>
+      </li>
+      <li><a href="employee-dashboard.html" class="menu-link">Dashboard</a></li>
+      <li><a href="employee-history.html">Order History</a></li> 
+      <li><a href="index.html">Log out</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Dashboard Content -->
+  <main class="main-content">
+    <div class="dashboard-box">
+      <h2>Orders History</h2>
+
+      <!-- Order History Table -->
+      <section class="dashboard-section">
+        <h3>Order History</h3>
+        <div class="table-wrapper">
+          <table class="uniform-table">
+            <thead>
+              <tr>
+                <th>Finished Product</th>
+                <th>Project Type</th>
+                <th>Customer</th>
+                <th>Date Accomplished</th>
+              </tr>
+            </thead>
+            <tbody id="order-history">
+              <!-- Filled by JS -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- JS -->
+  <script src="admin-dashboard.js" type="module"></script>
+</body>
+</html>

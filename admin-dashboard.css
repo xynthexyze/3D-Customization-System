@@ -1,0 +1,165 @@
+.menu-tab {
+    width: 200px;
+    height: 100vh;
+    background-color: #f20000;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.menu-tab ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.menu-tab li {
+    border-bottom: 1px solid #f20000;
+}
+
+.menu-tab a {
+    display: block;
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.menu-tab a:hover {
+    background-color: #575757;
+}
+
+.menu-icon {
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+    margin-right: 10px;
+    border-radius: 50%; /* optional: make it circular */
+}
+
+.menu-link {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    display: block;
+}
+
+.menu-link.active {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    left: 250px;
+}
+
+h2 {
+    font-size: 50px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+/* === Uniform Table Style (used for all tables: Pending Orders, Inventory, Order History, Employees) === */
+.uniform-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+.uniform-table th, .uniform-table td {
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+}
+
+.uniform-table thead {
+    background-color: #f20000;
+    color: white;
+}
+
+.uniform-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Custom widths for the Pending Orders table */
+#pending-orders th:nth-child(1),
+#pending-orders td:nth-child(1) {
+    width: 250px; /* Project Type */
+}
+
+#pending-orders th:nth-child(2),
+#pending-orders td:nth-child(2) {
+    width: 300px; /* Customer */
+}
+
+#pending-orders th:nth-child(3),
+#pending-orders td:nth-child(3) {
+    width: 220px; /* Location */
+}
+
+#pending-orders th:nth-child(4),
+#pending-orders td:nth-child(4) {
+    width: 150px; /* Due */
+}
+
+/* Custom widths for the Inventory Status table */
+#inventory-status th:nth-child(1),
+#inventory-status td:nth-child(1) {
+    width: 250px; /* Project Type */
+}
+
+#inventory-status th:nth-child(2),
+#inventory-status td:nth-child(2) {
+    width: 300px; /* Customer */
+}
+
+#inventory-status th:nth-child(3),
+#inventory-status td:nth-child(3) {
+    width: 220px; /* Location */
+}
+
+#inventory-status th:nth-child(4),
+#inventory-status td:nth-child(4) {
+    width: 150px; /* Due */
+}
+
+/* Custom widths for the Order History table */
+#order-history th:nth-child(1),
+#order-history td:nth-child(1) {
+    width: 250px; /* Project Type */
+}
+
+#order-history th:nth-child(2),
+#order-history d:nth-child(2) {
+    width: 300px; /* Customer */
+}
+
+#order-history th:nth-child(3),
+#order-history td:nth-child(3) {
+    width: 220px; /* Location */
+}
+
+#order-history th:nth-child(4),
+#order-history td:nth-child(4) {
+    width: 150px; /* Due */
+}

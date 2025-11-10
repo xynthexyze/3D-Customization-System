@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Dashboard</title>
+  <link rel="stylesheet" href="employee-dashboard.css">
+</head>
+<body>
+  <!-- Sidebar Navigation -->
+  <nav class="menu-tab">
+    <ul>
+      <li>
+        <a href="employee-profile.html">
+          <img src="profile.png" alt="Profile" class="menu-icon" /><br><br>
+          View Profile
+        </a>
+      </li>
+      <li><a href="employee-dashboard.html" class="menu-link">Dashboard</a></li>
+      <li><a href="admin-history.html">Order History</a></li> 
+      <li><a href="index.html">Log out</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Dashboard Content -->
+  <main class="main-content">
+    <div class="dashboard-box">
+      <h2>Dashboard Overview</h2>
+
+      <!-- Pending Orders Table -->
+      <section class="dashboard-section">
+        <h3>Pending Orders</h3>
+        <div class="table-wrapper">
+          <table class="uniform-table">
+            <thead>
+              <tr>
+                <th>Project Type</th>
+                <th>Quantity</th>
+                <th>Unit</th>
+                <th>Status</th>
+                <th>Action</th> <!--papasok yung order update kay admin pag ni-click yung complete-->
+              </tr>
+            </thead>
+            <tbody id="pending-orders">
+              <!-- Filled by JS -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Inventory Status Table -->
+      <section class="dashboard-section">
+        <h3>Inventory Status</h3>
+        <div class="table-wrapper">
+          <table class="uniform-table">
+            <thead>
+              <tr>
+                <th>Material</th>
+                <th>Quantity</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="inventory-status">
+              <!-- Filled by JS -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </main>
+  <script src="employee-dashboard.js" type="module"></script>
+</body>
+</html>

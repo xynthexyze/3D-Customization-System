@@ -1,0 +1,162 @@
+/* index.css - Homepage Styles */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.logo-img {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  height: 150px;
+  z-index: 10;
+  pointer-events: none; /* Makes it non-blocking */
+}
+
+/* Hero section fills screen */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url('bg.jpg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.btn {
+  padding: 12px 24px;
+  background: #ff416c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #e6395f;
+}
+
+.btn-alt {
+  background: transparent;
+  border: 2px solid #fff;
+}
+
+.btn-alt:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.quick-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 30px;
+  background: #f9f9f9;
+}
+
+.quick-links a {
+  color: #222;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 6px;
+  transition: background 0.2s;
+  background: #eee;
+}
+
+.quick-links a:hover {
+  background: #ddd;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+/* Optional: style dropdowns consistently */
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #222;
+  min-width: 160px;
+  top: 30px;
+  z-index: 1000;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.3);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #444;
+}
+
+.hero-content .copyright {
+  margin-top: 20px;
+  font-size: 14px;
+  opacity: 0.8;
+}

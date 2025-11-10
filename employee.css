@@ -1,0 +1,133 @@
+.menu-tab {
+    width: 200px;
+    height: 100vh;
+    background-color: #f20000;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.menu-tab ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.menu-tab li {
+    border-bottom: 1px solid #f20000;
+}
+
+.menu-tab a {
+    display: block;
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.menu-tab a:hover {
+    background-color: #575757;
+}
+
+.menu-icon {
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+    margin-right: 10px;
+    border-radius: 50%; /* optional: make it circular */
+}
+
+.menu-link {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    display: block;
+}
+
+.menu-link.active {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.main-content {
+    margin-left: 200px; /* same width as .menu-tab */
+    padding: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+h2 {
+    font-size: 50px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+}
+
+.data-table th, .data-table td {
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+}
+
+.data-table thead {
+    background-color: #f20000;
+    color: white;
+}
+
+.data-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.data-table tr {
+  height: 60px; /* Adjust as needed */
+}
+
+.data-table th,
+.data-table td {
+    padding: 16px 15px;
+}
+
+.data-table th:nth-child(1), /* Name */
+.data-table td:nth-child(1) {
+  width: 300px;
+}
+
+.data-table th:nth-child(2), /* Email */
+.data-table td:nth-child(2) {
+  width: 250px;
+}
+
+.data-table th:nth-child(3), /* Phone Number */
+.data-table td:nth-child(3) {
+  width: 150px;
+}
+
+.data-table th:nth-child(4), /* Address */
+.data-table td:nth-child(4) {
+  width: 200px;
+}
+
+.data-table th:nth-child(5), /* Verification */
+.data-table td:nth-child(5) {
+  width: 90px;
+}

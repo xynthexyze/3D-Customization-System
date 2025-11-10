@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Customize Your Project</title>
+        <link rel="stylesheet" href="order-type.css">
+    </head>
+<body>
+  <nav class="menu-tab">
+    <ul>
+      <li>
+          <a href="Customer-Profile.html">
+            <img src="profile.png" alt="Profile" class="menu-icon" /><br><br>
+            View Profile
+          </a>
+        <li><a href="customer-dashboard.html">Dashboard</a></li>
+        <li><a href="order-history.html">Order History</a></li>
+        <li><a href="index.html">Log out</a></li>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- ✅ main-content should NOT be inside nav -->
+  <main class="main-content">
+    <div class="dashboard-box">
+      <h2>Choose a signage type</h2>
+      <!-- ✅ Button after table -->
+      <button class="panaflex-btn" onclick="window.location.href='panaflex-custom.html'">Panaflex Signage</button>
+      <button class="tarp-btn" onclick="window.location.href='tarp-custom.html'">Tarpaulin Signage</button>
+    </div>
+  </main>
+</body>
+</html>
