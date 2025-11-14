@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Profile</title>
+  <title>Admin Profile</title>
   <link rel="stylesheet" href="profile.css">
 </head>
 <body>
@@ -11,8 +11,8 @@
   <nav class="menu-tab">
     <ul>
       <li>
-        <a href="profile.html">
-          <img src="profile.png" alt="Profile" class="menu-icon" /><br><br>
+        <a href="admin-profile.html" class="menu-link active">
+          <img src="profile.png" alt="Profile" class="menu-icon"><br><br>
           View Profile
         </a>
       </li>
@@ -20,16 +20,16 @@
       <li><a href="employee.html" class="menu-link">Employees</a></li>
       <li><a href="customers.html" class="menu-link">Customers</a></li>
       <li><a href="inventory.html" class="menu-link">Inventory</a></li>
-      <li><a href="*">Order History</a></li>
-      <li><a href="create-employee.html" class="menu-link">Manage Account</a></li>
-      <li><a href="index.html" class="menu-link">Log out</a></li>
+      <li><a href="admin-history.html" class="menu-link">Order History</a></li>
+      <li><a href="create-employee.html" class="menu-link">Manage Accounts</a></li>
+      <li><a href="index.html" class="menu-link logout">Log out</a></li>
     </ul>
   </nav>
 
-  <!-- Main Profile Content -->
+  <!-- Profile Content -->
   <main class="main-content">
     <div class="user-profile">
-      <h2>Profile</h2>
+      <h2>Admin Profile</h2>
       <div class="profile-box">
         <img src="profile-icon-black.png" alt="Profile Icon" class="profile-icon">
         <div class="profile-info">
@@ -38,12 +38,11 @@
           <p><strong>Contact:</strong> <span id="profile-contact"></span></p>
           <p><strong>Email:</strong> <span id="profile-email"></span></p>
           <p><strong>Position:</strong> <span id="profile-role"></span></p>
-
         </div>
       </div>
     </div>
   </main>
-  <script type="module" src="profile.js"></script>
 
+  <script src="profile.js" type="module"></script>
 </body>
 </html>

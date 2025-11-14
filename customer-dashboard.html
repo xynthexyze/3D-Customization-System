@@ -2,46 +2,48 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard</title>
-  <link rel="stylesheet" href="customer-dashboard.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customer Dashboard - V.A. Erni's</title>
+  <link rel="stylesheet" href="customer-dashboard.css" />
 </head>
 <body>
+  <!-- Sidebar Navigation -->
   <nav class="menu-tab">
     <ul>
       <li>
-        <a href="Customer-Profile.html">
+        <a href="customer-profile.html">
           <img src="profile.png" alt="Profile" class="menu-icon" /><br><br>
           View Profile
         </a>
       </li>
-      <li><a href="customer-dashboard.html">Dashboard</a></li>
-      <li><a href="order-history.html">Order History</a></li>
-      <li><a href="index.html">Log out</a></li>
+      <li><a href="customer-dashboard.html" class="menu-link active">Dashboard</a></li>
+      <li><a href="order-history.html" class="menu-link">Order History</a></li>
+      <li><a href="billing.html" class="menu-link">Billing & Payments</a></li>
+      <li><a href="index.html" class="menu-link logout">Log out</a></li>
     </ul>
   </nav>
 
+  <!-- Main Content -->
   <main class="main-content">
     <div class="dashboard-box">
-      <h2>Pending Orders</h2>
-      <table class="data-table">
-        <thead>
-          <tr>
-            <th>Project Type</th>
-            <th>Dimension</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-        <tbody id="order-table-body">
-          <!-- Pending orders will be appended here -->
-        </tbody>
-      </table>
+      <h2>Welcome to Your Dashboard</h2>
+      <p>Manage your signage projects and track orders.</p>
+      
+      <div style="text-align: center; margin: 30px 0;">
+        <button class="action-btn" onclick="window.location.href='order-type.html'" style="max-width: 300px;">
+          Start New Project
+        </button>
+      </div>
 
-      <button class="action-btn" onclick="window.location.href='order-type.html'">Customize a project</button>
+      <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0;">
+        <h3>Quick Actions</h3>
+        <p>• <a href="order-history.html">View your order history</a></p>
+        <p>• <a href="billing.html">Check and pay invoices</a></p>
+        <p>• <a href="customer-profile.html">Update your profile</a></p>
+      </div>
     </div>
   </main>
 
-  <!-- ✅ Link to external JS -->
   <script type="module" src="customer-dashboard.js"></script>
 </body>
 </html>

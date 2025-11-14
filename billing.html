@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Billing and Payments</title>
+  <link rel="stylesheet" href="customer-dashboard.css" />
+  <!-- PayPal SDK -->
+  <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=PHP"></script>
+</head>
+<body>
+  <!-- Sidebar Navigation -->
+  <nav class="menu-tab">
+    <ul>
+      <li>
+        <a href="customer-profile.html">
+          <img src="profile.png" alt="Profile" class="menu-icon" /><br><br>
+          View Profile
+        </a>
+      </li>
+      <li><a href="customer-dashboard.html" class="menu-link">Dashboard</a></li>
+      <li><a href="order-history.html" class="menu-link">Order History</a></li>
+      <li><a href="billing.html" class="menu-link active">Billing</a></li>
+      <li><a href="index.html" class="menu-link logout">Log out</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="dashboard-box">
+      <h2>Billing and Payments</h2>
+      <p>Pay your project invoices securely using PayPal.</p>
+
+      <div id="invoiceSection" style="margin-top:20px;">
+        <h3>Your Current Invoices</h3>
+        <div id="pendingInvoices">
+          <p>Loading your invoices...</p>
+        </div>
+        <div id="paypal-button-container" style="margin-top:20px;"></div>
+      </div>
+
+      <hr style="margin:25px 0;">
+
+      <h3>Payment History</h3>
+      <div id="paymentHistory" style="max-height:300px; overflow-y:auto; font-size:14px;">
+        <p>Loading your payment history...</p>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="billing.js"></script>
+</body>
+</html>

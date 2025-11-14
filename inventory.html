@@ -3,70 +3,70 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Inventory</title>
-  <link rel="stylesheet" href="inventory.css" />
+  <title>Inventory Management - V.A. Erni's</title>
+  <link rel="stylesheet" href="admin-dashboard.css" />
 </head>
 <body>
   <nav class="menu-tab">
     <ul>
-      <a href="admin-profile.html">
-        <img src="profile.png" alt="Profile" class="menu-icon" /><br><br>
-        View Profile
-      </a>
+      <li><a href="admin-profile.html"><img src="profile.png" alt="Profile" class="menu-icon" /><br><br>View Profile</a></li>
       <li><a href="admin-dashboard.html">Dashboard</a></li>
       <li><a href="employee.html">Employees</a></li>
       <li><a href="customers.html">Customers</a></li>
-      <li><a href="inventory.html">Inventory</a></li>
+      <li><a href="inventory.html" class="active">Inventory</a></li>
       <li><a href="admin-history.html">Order History</a></li>
-      <li><a href="create-employee.html" class="menu-link">Manage Account</a></li>
+      <li><a href="create-employee.html">Manage Accounts</a></li>
       <li><a href="index.html">Log out</a></li>
     </ul>
   </nav>
 
   <main class="main-content">
-<section class="form-container">
-  <div class="form-section">
-    <h2>Add Material</h2>
-    <form id="addItemForm">
-      <select id="material" required>
-        <option value="">Select Material</option>
-        <option value="Panaflex Signage">Panaflex</option>
-        <option value="Tarpaulin Signage">Tarpaulin</option>
-        <option value="New Material">Add a new material</option>
-        <input type="text" id="material" placeholder="Add a new material" required /> <!--lalabas lang itong text box kapag ni-select yung add-->
-      </select>
-
-      <input type="number" id="stock" placeholder="No. of Material" required />
-
-      <select id="unit" required>
-        <option value="">Select Unit</option>
-        <option value="SQFT">Square Foot</option>
-        <option value="FT">Foot</option>
-        <option value="SQINCH">Square Inch</option>
-        <option value="New Measurement">Add a new measurement</option>
-        <input type="text" id="measurement" placeholder="Add a new measurement" required /> <!--lalabas lang itong text box kapag ni-select yung add-->
-      </select>
-
-      <button type="submit">Add Item</button>
-    </form>
-  </div>
-
-    <section>
-      <div class="dashboard-box">
-        <h2>Inventory</h2>
-        <table class="data-table">
-          <thead>
-            <tr>
-              <th>Material</th>
-              <th>Quantity</th>
-              <th>Unit</th>
-              <th>Status</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody id="inventoryTableBody"></tbody>
-        </table>
+    <section class="form-container">
+      <!-- Add New Item Form -->
+      <div class="form-section">
+        <h2>Add New Material</h2>
+        <form id="addItemForm">
+          <select id="material" required>
+            <option value="">Select Material</option>
+            <option value="Panaflex">Panaflex</option>
+            <option value="Tarpaulin">Tarpaulin</option>
+            <option value="Metal Sheet">Metal Sheet</option>
+            <option value="Acrylic">Acrylic</option>
+            <option value="Other">Other Material</option>
+          </select>
+          <input type="number" id="stock" placeholder="Quantity" min="0" required />
+          <select id="unit" required>
+            <option value="">Select Unit</option>
+            <option value="sq. ft.">Square Feet</option>
+            <option value="pcs">Pieces</option>
+            <option value="roll">Roll</option>
+          </select>
+          <button type="submit">Add to Inventory</button>
+        </form>
       </div>
+
+      <!-- Current Inventory -->
+      <section>
+        <div class="dashboard-box">
+          <h2>Current Inventory</h2>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Material</th>
+                <th>Quantity</th>
+                <th>Unit</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="inventoryTableBody">
+              <tr>
+                <td colspan="5" style="text-align:center;">Loading inventory...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
     </section>
   </main>
 

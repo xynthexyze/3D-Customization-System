@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Employee Dashboard</title>
-  <link rel="stylesheet" href="employee-dashboard.css">
+  <link rel="stylesheet" href="employee-dashboard.css" />
 </head>
 <body>
   <!-- Sidebar Navigation -->
@@ -16,9 +16,9 @@
           View Profile
         </a>
       </li>
-      <li><a href="employee-dashboard.html" class="menu-link">Dashboard</a></li>
-      <li><a href="admin-history.html">Order History</a></li> 
-      <li><a href="index.html">Log out</a></li>
+      <li><a href="employee-dashboard.html" class="menu-link active">Dashboard</a></li>
+      <li><a href="admin-history.html" class="menu-link">Order History</a></li>
+      <li><a href="index.html" class="menu-link logout">Log out</a></li>
     </ul>
   </nav>
 
@@ -27,7 +27,7 @@
     <div class="dashboard-box">
       <h2>Dashboard Overview</h2>
 
-      <!-- Pending Orders Table -->
+      <!-- Pending Orders Section -->
       <section class="dashboard-section">
         <h3>Pending Orders</h3>
         <div class="table-wrapper">
@@ -38,17 +38,17 @@
                 <th>Quantity</th>
                 <th>Unit</th>
                 <th>Status</th>
-                <th>Action</th> <!--papasok yung order update kay admin pag ni-click yung complete-->
+                <th>Action</th> <!-- Admin will update order when clicked -->
               </tr>
             </thead>
             <tbody id="pending-orders">
-              <!-- Filled by JS -->
+              <!-- Filled by employee-dashboard.js -->
             </tbody>
           </table>
         </div>
       </section>
 
-      <!-- Inventory Status Table -->
+      <!-- Inventory Status Section -->
       <section class="dashboard-section">
         <h3>Inventory Status</h3>
         <div class="table-wrapper">
@@ -61,13 +61,14 @@
               </tr>
             </thead>
             <tbody id="inventory-status">
-              <!-- Filled by JS -->
+              <!-- Filled by employee-dashboard.js -->
             </tbody>
           </table>
         </div>
       </section>
     </div>
   </main>
+
   <script src="employee-dashboard.js" type="module"></script>
 </body>
 </html>

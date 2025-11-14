@@ -1,40 +1,39 @@
-import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js';
-import { GLTFLoader } from 'https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/loaders/GLTFLoader.js';
-import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/controls/OrbitControls.js';
-import { FontLoader } from 'https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/loaders/FontLoader.js';
-import { TextGeometry } from 'https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/geometries/TextGeometry.js';
+import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.164.0/build/three.module.js';
+import { GLTFLoader } from 'https://cdn.jsdelivr.net/npm/three@0.164.0/examples/jsm/loaders/GLTFLoader.js';
+import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.164.0/examples/jsm/controls/OrbitControls.js';
+import { FontLoader } from 'https://cdn.jsdelivr.net/npm/three@0.164.0/examples/jsm/loaders/FontLoader.js';
+import { TextGeometry } from 'https://cdn.jsdelivr.net/npm/three@0.164.0/examples/jsm/geometries/TextGeometry.js';
 
 const container = document.getElementById('viewer-container');
 const colorPicker = document.getElementById('colorPicker');
 const textInput = document.getElementById('signText');
 const updateTextBtn = document.getElementById('updateTextBtn');
 
-// === Scene Setup ===
+if (!container || !colorPicker || !textInput || !updateTextBtn) {
+  console.error("Missing DOM elements for 3D viewer.");
+  return;
+}
+
+// Scene setup
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(0xf0f0f0);
 
-const camera = new THREE.PerspectiveCamera(
-  60,
-  container.clientWidth / container.clientHeight,
-  0.1,
-  1000
-);
+const camera = new THREE.PerspectiveCamera(60, container.clientWidth / container.clientHeight, 0.1, 1000);
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(container.clientWidth, container.clientHeight);
 container.appendChild(renderer.domElement);
 
-// === Lighting ===
+const controls = new OrbitControls(camera, renderer.domElement);
+camera.position.set(2, 2, 5);
+controls.update();
+
+// Lighting
 scene.add(new THREE.AmbientLight(0xffffff, 0.8));
 const light = new THREE.DirectionalLight(0xffffff, 1);
 light.position.set(10, 10, 10);
 scene.add(light);
 
-// === Controls ===
-const controls = new OrbitControls(camera, renderer.domElement);
-camera.position.set(2, 2, 5);
-controls.update();
-
-// === Load signage base ===
+// Load model
 let signageBase;
 const loader = new GLTFLoader();
 loader.load(
@@ -52,14 +51,13 @@ loader.load(
   (error) => console.error('Error loading model:', error)
 );
 
-// === Add dynamic text ===
+// Text
 let textMesh;
 const fontLoader = new FontLoader();
 fontLoader.load(
-  'https://cdn.jsdelivr.net/npm/three@0.160.0/examples/fonts/helvetiker_regular.typeface.json',
+  'https://cdn.jsdelivr.net/npm/three@0.164.0/examples/fonts/helvetiker_regular.typeface.json',
   (font) => {
     createText(font, "Your Sign Here");
-
     updateTextBtn.addEventListener('click', () => {
       const newText = textInput.value || "Your Sign Here";
       scene.remove(textMesh);
@@ -80,7 +78,7 @@ function createText(font, text) {
   scene.add(textMesh);
 }
 
-// === Color Change Logic ===
+// Color change
 colorPicker.addEventListener('input', (event) => {
   const color = new THREE.Color(event.target.value);
   if (signageBase) {
@@ -90,7 +88,7 @@ colorPicker.addEventListener('input', (event) => {
   }
 });
 
-// === Animate ===
+// Animate
 function animate() {
   requestAnimationFrame(animate);
   controls.update();
@@ -98,7 +96,7 @@ function animate() {
 }
 animate();
 
-// === Handle Resize ===
+// Resize
 window.addEventListener('resize', () => {
   camera.aspect = container.clientWidth / container.clientHeight;
   camera.updateProjectionMatrix();
