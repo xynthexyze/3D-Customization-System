@@ -2,24 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Create Employee Account</title>
   <link rel="stylesheet" href="create-employee.css" />
 </head>
 <body>
+  <!-- Sidebar Navigation -->
   <nav class="menu-tab">
     <ul>
-      <li><a href="admin-dashboard.html"><img src="profile.png" alt="Profile" class="menu-icon" /><br><br>View Profile</a></li>
+      <li>
+        <a href="admin-profile.html">
+          <img src="profile.png" alt="Profile" class="menu-icon" /><br><br>
+          View Profile
+        </a>
+      </li>
       <li><a href="admin-dashboard.html" class="menu-link">Dashboard</a></li>
       <li><a href="employee.html" class="menu-link">Employees</a></li>
       <li><a href="customers.html" class="menu-link">Customers</a></li>
       <li><a href="inventory.html" class="menu-link">Inventory</a></li>
-      <li><a href="*">Order History</a></li>
-      <li><a href="create-employee.html" class="menu-link">Manage Account</a></li>
-      <li><a href="index.html">Log out</a></li>
+      <li><a href="admin-history.html" class="menu-link">Order History</a></li>
+      <li><a href="create-employee.html" class="menu-link">Manage Accounts</a></li>
+      <li><a href="index.html" class="menu-link">Log out</a></li>
     </ul>
   </nav>
 
+  <!-- Main Content -->
   <main class="main-content">
     <div class="form-section">
       <h2>Create Employee Account</h2>
@@ -37,6 +44,7 @@
       </form>
     </div>
   </main>
+
   <script type="module" src="create-employee.js"></script>
 </body>
 </html>
